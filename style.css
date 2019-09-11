@@ -84,20 +84,13 @@ a{
 /* animations / utilities */
 .section-2 a:hover{
     font-size: 1.3rem;
-    color: #101214;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.section-2 h2:hover{
-    font-size: 2rem;
-    color: #101214;
+    color: #fff;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .section-1 a:hover{
-    color: #101214;
+    color: #fff;
     cursor: pointer;
     transition: 0.3s;
 }
