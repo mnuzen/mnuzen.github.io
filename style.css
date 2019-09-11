@@ -87,6 +87,13 @@ a{
     transition: 0.2s;
 }
 
+.section-2 h2:hover{
+    font-size: 1.8rem;
+    color: #101214;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
 .section-1 a:hover{
     color: #101214;
     cursor: pointer;
