@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Notify slack fail
-          if: ${{ secrets.SLACK_BOT_TOKEN != secrets.SLACK_DEV_CHANNEL_ID }}
+          if: success()
           env:
             SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           uses: voxmedia/github-action-slack-notify-build@v1
