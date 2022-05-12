@@ -6,6 +6,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+        - name: Failing build
+          run: ./scripts/exit-test.sh
+
         - name: Notify slack fail
           if: failure()
           env:
@@ -16,6 +19,3 @@ jobs:
             channel_id: ${{ secrets.SLACK_DEV_CHANNEL_ID }}
             status: FAILED
             color: danger
-
-        - name: Failing build
-          run: ./scripts/exit-test.sh
