@@ -1,0 +1,18 @@
+name: failure-action
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Notify slack fail
+          if: always()
+          env:
+            SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          uses: voxmedia/github-action-slack-notify-build@v1
+          with:
+            channel: dev-notitifcation
+            channel_id: ${{ secrets.SLACK_DEV_CHANNEL_ID }}
+            status: FAILED
+            color: danger
